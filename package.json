@@ -1,0 +1,29 @@
+{
+  "name": "mqtt2swissmeteo",
+  "version": "1.0.0",
+  "description": "Node.js based interface between MQTT and Swiss Meteo for a smart home",
+  "keywords": [
+    "smarthome",
+    "mqtt",
+    "swiss",
+    "meteo"
+  ],
+  "main": "index.js",
+  "bin": {
+    "mqtt2swissmeteo": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiospizzi/mqtt2swissmeteo.git"
+  },
+  "author": "Claudio Spizzi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claudiospizzi/mqtt2swissmeteo/issues"
+  },
+  "homepage": "https://github.com/claudiospizzi/mqtt2swissmeteo#readme",
+    "dependencies": {
+    "mqtt": "^2.18.8",
+    "yalm": "^4.1.0"
+  }
+}
