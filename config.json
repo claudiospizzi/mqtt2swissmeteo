@@ -4,5 +4,12 @@
         "url": "mqtt://192.168.1.10",
         "name": "swissmeteo",
         "secure": false
+    },
+    "swissmeteo": {
+        "pollInterval": 60,
+        "weatherStation": {
+            "id": "KLO",
+            "name": "Zürich Kloten"
+        }
     }
 }
