@@ -1,14 +1,14 @@
+// API Description
+// - Automatic Measurement Stations:
+//   https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/VQHA80.csv
+//   https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/info/VQHA80_en.txt
+// - Precipitation Stations:
+//   https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/VQHA98.csv
+//   https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/info/VQHA98_en.txt
+
 const request = require('request');
 const csvParse = require('csv-parse');
 const moment = require('moment');
-
-// Automatic Measurement Stations:
-// https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/VQHA80.csv
-// https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/info/VQHA80_en.txt
-
-// Precipitation Stations:
-// https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/VQHA98.csv
-// https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/info/VQHA98_en.txt
 
 function getWeatherData(station, callback) {
 
