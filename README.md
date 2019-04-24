@@ -60,16 +60,26 @@ values like the mqtt url and add the MeteoSwiss weather station. A list of weath
 
 Every 15 minutes, the data from MeteoSwiss is updated. As the updated data was loaded, it will publish the values as dedicted topics to MQTT. The following topics would be published for the station *Zürich Kloten*. The latest value is
 in the JSON payload with the field `val`.
-* `swissmeteo/temperature/Zürich Kloten`
-* `swissmeteo/precipitation/Zürich Kloten`
-* `swissmeteo/sunshine/Zürich Kloten`
-* `swissmeteo/radiation/Zürich Kloten`
-* `swissmeteo/humidity/Zürich Kloten`
-* `swissmeteo/dewPoint/Zürich Kloten`
-* `swissmeteo/windDirection/Zürich Kloten`
-* `swissmeteo/windSpeed/Zürich Kloten`
-* `swissmeteo/gustPeak/Zürich Kloten`
-* `swissmeteo/pressure/Zürich Kloten`
+* `swissmeteo/temperature/Zürich Kloten`  
+  Current air temperature 2 meter above ground in `°C`.
+* `swissmeteo/precipitation/Zürich Kloten`  
+  Total precipitation during the last ten minutes in `mm`.
+* `swissmeteo/sunshine/Zürich Kloten`  
+  Total sunshine duration during the last ten minutes in `min`.
+* `swissmeteo/radiation/Zürich Kloten`  
+  Mean global radiation during the last ten minutes in `W/m²`.
+* `swissmeteo/humidity/Zürich Kloten`  
+  Current relative air humidity 2 meter above ground in `%`.
+* `swissmeteo/dewPoint/Zürich Kloten`  
+  Current dew point 2 meter above ground in `°C`.
+* `swissmeteo/windDirection/Zürich Kloten`  
+  Mean wind direction during the last ten minutes in `°`.
+* `swissmeteo/windSpeed/Zürich Kloten`  
+  Mean wind speed during the last ten minutes in `km/h`.
+* `swissmeteo/gustPeak/Zürich Kloten`  
+  Maximum gust peak during the last ten minutes in `km/h`.
+* `swissmeteo/pressure/Zürich Kloten`  
+  Current pressure at station level (QFE) in `hPa`.
 
 [MeteoSwiss]: https://www.meteoswiss.admin.ch
 [MeteoSwiss Weather Stations]: https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/info/VQHA80_en.txt
