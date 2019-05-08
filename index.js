@@ -1,18 +1,29 @@
 #!/usr/bin/env node
 
+
+/**
+ * SETUP
+ */
+
+// Global modules
 const log = require('yalm');
 const mqtt = require('mqtt');
 
+// Local modules
 const swissmeteo = require('./modules/swissmeteo.js');
 
 const pkg = require('./package.json');
 const cfg = require(process.argv[2] || './config.json');
 
-let mqttConnected;
-let weatherDataTime;
-
 log.setLevel(cfg.log);
 log.info(pkg.name + ' ' + pkg.version + ' starting');
+
+
+/**
+ * SETUP MQTT
+ */
+
+let mqttConnected;
 
 const mqttClient = mqtt.connect(
     cfg.mqtt.url, {
@@ -41,6 +52,13 @@ mqttClient.on('error', err => {
 
     log.error('mqtt: error ' + err.message);
 });
+
+
+/**
+ * POLLING LOGIC
+ */
+
+let weatherDataTime;
 
 function pollSwissMeteoData() {
 
