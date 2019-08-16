@@ -1,6 +1,6 @@
 {
   "name": "mqtt2swissmeteo",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Node.js based interface between MQTT and Swiss Meteo for a smart home",
   "keywords": [
     "smarthome",
@@ -25,7 +25,7 @@
   "dependencies": {
     "csv-parse": "^4.4.5",
     "moment": "^2.24.0",
-    "mqtt": "^2.18.8",
+    "mqtt": "^3.0.0",
     "request": "^2.88.0",
     "yalm": "^4.1.0"
   },
