@@ -46,7 +46,7 @@ weather stations can be found here: [MeteoSwiss Weather Stations].
         "secure": false
     },
     "swissmeteo": {
-        "pollInterval": 60,
+        "pollIntervalSec": 60,
         "weatherStation": {
             "id": "KLO",
             "name": "Zürich Kloten"
@@ -63,30 +63,34 @@ Every 15 minutes, the data from MeteoSwiss is updated. As the updated data was
 loaded, it will publish the values as dedicated topics to MQTT. The following
 topics are be published for the station *Zürich Kloten*. The latest value is in
 the JSON payload field `val`.
+
 * `swissmeteo/temperature/Zürich Kloten`  
   Current air temperature 2 meter above ground in `°C`.
-* `swissmeteo/precipitation/Zürich Kloten`  
+* `swissmeteo/precipitation10Min/Zürich Kloten`  
   Total precipitation during the last ten minutes in `mm`.
-* `swissmeteo/sunshine/Zürich Kloten`  
+* `swissmeteo/sunshine10Min/Zürich Kloten`  
   Total sunshine duration during the last ten minutes in `min`.
-* `swissmeteo/radiation/Zürich Kloten`  
+* `swissmeteo/radiation10Min/Zürich Kloten`  
   Mean global radiation during the last ten minutes in `W/m²`.
 * `swissmeteo/humidity/Zürich Kloten`  
   Current relative air humidity 2 meter above ground in `%`.
 * `swissmeteo/dewPoint/Zürich Kloten`  
   Current dew point 2 meter above ground in `°C`.
-* `swissmeteo/windDirection/Zürich Kloten`  
+* `swissmeteo/windDirection10Min/Zürich Kloten`  
   Mean wind direction during the last ten minutes in `°`.
-* `swissmeteo/windSpeed/Zürich Kloten`  
+* `swissmeteo/windSpeed10Min/Zürich Kloten`  
   Mean wind speed during the last ten minutes in `km/h`.
-* `swissmeteo/gustPeak/Zürich Kloten`  
+* `swissmeteo/gustPeak10Min/Zürich Kloten`  
   Maximum gust peak during the last ten minutes in `km/h`.
-* `swissmeteo/pressure/Zürich Kloten`  
+* `swissmeteo/pressureAbsolute/Zürich Kloten`  
   Current pressure at station level (QFE) in `hPa`.
+* `swissmeteo/pressureRelative/Zürich Kloten`  
+  Current pressure at sea level (QFF) in `hPa`.
 
 ## MeteoSwiss
 
 The swiss Federal Office of Meteorology and Climatology [MeteoSwiss] provides the data in an open api. The api description and links to the latest data:
+
 * [MeteoSwiss API Description]
 * [Automatic Measurement Stations - Data]
 * [Automatic Measurement Stations - Info]

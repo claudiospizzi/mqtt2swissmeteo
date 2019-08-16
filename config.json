@@ -6,7 +6,7 @@
         "secure": false
     },
     "swissmeteo": {
-        "pollInterval": 60,
+        "pollIntervalSec": 60,
         "weatherStation": {
             "id": "KLO",
             "name": "Zürich Kloten"
